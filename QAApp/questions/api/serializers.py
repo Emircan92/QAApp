@@ -27,12 +27,12 @@ class QuestionSerializer(serializers.ModelSerializer):
 	author = serializers.StringRelatedField(read_only=True)
 	created_at = serializers.SerializerMethodField()
 	slug = serializers.SlugField(read_only=True)
-	answer_count = serializers.SerializerMethodField()
+	answers_count = serializers.SerializerMethodField()
 	user_has_answered = serializers.SerializerMethodField()
 
 	class Meta:
 		model = Question
-		exclude = ["updated"]
+		exclude = ["updated_at"]
 
 	def get_created_at(self, instance):
 		return instance.created_at.strftime("%B %d %Y")

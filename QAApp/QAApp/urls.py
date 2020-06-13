@@ -41,6 +41,9 @@ urlpatterns = [
     path("api/",
          include("users.api.urls")),
 
+    path("api/",
+         include("questions.api.urls")),
+
     # login via Browsable API
     path("api-auth/",
          include("rest_framework.urls")),
