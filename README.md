@@ -1,3 +1,3 @@
-# Single Page QA App
+# A simpe QA App
 
-A single page QA App.
+A simple QA App.
